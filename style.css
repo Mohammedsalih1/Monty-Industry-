@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+
+  --main-color: #248;
+
+  --main-transition: 0.5s ease;
+
+}
+/* start global rules*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(180deg, var(--main-color) 40%, #4aadbd 58%);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button:focus-visible {
+  outline: 2px solid gray;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*small*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*end gloal rules*/
+/*==============================================  Header begins  ==================================================*/
+header {
+  /* background: white; */
+  padding: 10px 0;
+  color: #2689dd;
+}
+header .container {
+  display: flex;
+  align-items: center;
+}
+header .container .App-logo {
+  width: 50px;
+}
+header .container .App-name {
+  color: white;
+  font-family: "Lobster", cursive;
+}
+/*==============================================  Header ends  ====================================================*/
+/*==============================================  search-section begins  ====================================================*/
+.search-section .frist-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.7rem;
+  background-color: white;
+  position: absolute;
+  height: 100vh;
+  z-index: 111;
+  top: 0;
+  width: 100%;
+}
+.search-section .frist-page img {
+  width: 50px;
+}
+.search-section .container {
+  margin-block-start: 20px;
+}
+.search-section .container .wrapper {
+  background: white;
+  padding: 16px;
+  border-radius: 3px;
+  position: relative;
+}
+.search-section .container .wrapper input[type="search"] {
+  width: 100%;
+  padding-block: 15px;
+  padding-inline: 10px;
+  margin-block-end: 10px;
+  font-size: 17px;
+  border: 2px solid var(--main-color);
+  border-radius: 6px;
+}
+.search-section .container .wrapper input[type="search"]:focus-visible {
+  background-color: #eee;
+  outline: none;
+  border: 2px solid transparent;
+}
+#play-btn {
+  border: none;
+  background: var(--main-color);
+  color: white;
+  padding-inline: 16px;
+  padding-block: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  margin-left: auto;
+}
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding-block-end: 10px;
+  color: white;
+  line-height: 20px;
+  font-size: 14px;
+}
